@@ -36,7 +36,7 @@ public class CustometrRepository {
     public void updatPassword(Customer customer){
         String sql_query = "Update Customer SET  password = ? WHERE customerID = ?";
         jdbcTemplate.update(sql_query,
-                customer.getUserName(),
+                customer.getPassword(),
                 customer.getCustomerId()
         );
     }
