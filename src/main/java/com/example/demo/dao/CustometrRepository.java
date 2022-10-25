@@ -26,7 +26,7 @@ public class CustometrRepository {
     }
 
     public void updateUserName(Customer customer){
-        String sql_query = "Update Customer SET  userName = ?, password = ? WHERE customerID = ?";
+        String sql_query = "Update Customer SET  userName = ?, WHERE customerID = ?";
         jdbcTemplate.update(sql_query,
                 customer.getUserName(),
                 customer.getCustomerId()
@@ -34,7 +34,7 @@ public class CustometrRepository {
     }
 
     public void updatPassword(Customer customer){
-        String sql_query = "Update Customer SET  userName = ?, password = ? WHERE customerID = ?";
+        String sql_query = "Update Customer SET  password = ? WHERE customerID = ?";
         jdbcTemplate.update(sql_query,
                 customer.getUserName(),
                 customer.getCustomerId()
