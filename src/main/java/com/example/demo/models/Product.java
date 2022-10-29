@@ -8,11 +8,17 @@ public class Product {
 	
 	private String title;
 	
+	private String imageLink;
+
 	private String description;
 	
 	private float unitPrice;
 	
-	private int inventory;
+	private int smallInStock;
+	
+	private int mediumInStock;
+	
+	private int largeInStock;
 
 	public int getProductId() {
 		return productId;
@@ -38,6 +44,14 @@ public class Product {
 		this.title = title;
 	}
 
+	public String getImageLink() {
+		return imageLink;
+	}
+
+	public void setImageLink(String imageLink) {
+		this.imageLink = imageLink;
+	}
+
 	public String getDescription() {
 		return description;
 	}
@@ -54,18 +68,36 @@ public class Product {
 		this.unitPrice = unitPrice;
 	}
 
-	public int getInventory() {
-		return inventory;
+	public int getSmallInStock() {
+		return smallInStock;
 	}
 
-	public void setInventory(int inventory) {
-		this.inventory = inventory;
+	public void setSmallInStock(int smallInStock) {
+		this.smallInStock = smallInStock;
+	}
+
+	public int getMediumInStock() {
+		return mediumInStock;
+	}
+
+	public void setMediumInStock(int mediumInStock) {
+		this.mediumInStock = mediumInStock;
+	}
+
+	public int getLargeInStock() {
+		return largeInStock;
+	}
+
+	public void setLargeInStock(int largeInStock) {
+		this.largeInStock = largeInStock;
 	}
 
 	@Override
 	public String toString() {
-		return "Product [productId=" + productId + ", categoryId=" + categoryId + ", title=" + title + ", description="
-				+ description + ", unitPrice=" + unitPrice + ", inventory=" + inventory + "]";
+		return "Product [productId=" + productId + ", categoryId=" + categoryId + ", title=" + title + ", imageLink="
+				+ imageLink + ", description=" + description + ", unitPrice=" + unitPrice + ", smallInStock="
+				+ smallInStock + ", mediumInStock=" + mediumInStock + ", largeInStock=" + largeInStock + "]";
 	}
+	
 	
 }

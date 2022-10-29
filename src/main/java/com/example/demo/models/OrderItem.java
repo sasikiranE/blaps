@@ -1,8 +1,8 @@
 package com.example.demo.models;
 
-public class CartItem {
+public class OrderItem {
 	
-	private int cartId;
+	private int orderId;
 	
 	private int productId;
 	
@@ -12,12 +12,12 @@ public class CartItem {
 	
 	private String size;
 
-	public int getCartId() {
-		return cartId;
+	public int getOrderId() {
+		return orderId;
 	}
 
-	public void setCartId(int cartId) {
-		this.cartId = cartId;
+	public void setOrderId(int orderId) {
+		this.orderId = orderId;
 	}
 
 	public int getProductId() {
@@ -54,8 +54,9 @@ public class CartItem {
 
 	@Override
 	public String toString() {
-		return "CartItem [cartId=" + cartId + ", productId=" + productId + ", unitPrice=" + unitPrice + ", quantity="
+		return "OrderItem [orderId=" + orderId + ", productId=" + productId + ", unitPrice=" + unitPrice + ", quantity="
 				+ quantity + ", size=" + size + "]";
 	}
+	
 	
 }

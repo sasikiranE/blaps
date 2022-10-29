@@ -17,14 +17,16 @@ public class ProductRepository {
 	JdbcTemplate jdbcTemplate;
 	
 	public void createProduct(Product product) {
-		String sql_query = "INSERT INTO Product (productId, categoryId, title, description, unitPrice, inventory) VALUES (?, ?, ?, ?, ?, ?)";
-		jdbcTemplate.update(sql_query, 
-				product.getProductId(), 
+		String sql_query = "INSERT INTO Product (categoryId, title, imageLink, description, unitPrice, smallInStock, mediumInStock, largeInStock,) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+		jdbcTemplate.update(sql_query,
 				product.getCategoryId(), 
-				product.getTitle(), 
+				product.getTitle(),
+				product.getImageLink(),
 				product.getDescription(), 
 				product.getUnitPrice(), 
-				product.getInventory()
+				product.getSmallInStock(),
+				product.getMediumInStock(),
+				product.getLargeInStock()
 		);
 	}
 	
@@ -35,7 +37,9 @@ public class ProductRepository {
 				product.getTitle(),
 				product.getDescription(),
 				product.getUnitPrice(),
-				product.getInventory(),
+				product.getSmallInStock(),
+				product.getMediumInStock(),
+				product.getLargeInStock(),
 				product.getProductId()
 		);
 	}
